@@ -1,0 +1,147 @@
+body {
+  background-color: #fff;
+  padding: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+}
+.calendar {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 10px 15px; */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.cell {
+  color: initial;
+  width: 13%;
+  height: 50px;
+  flex-grow: 1;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid #4949492e;
+  border-radius: 10px;
+  background-color: rgba(222, 227, 255, 0.329);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.isHoliday {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.cell .date-number {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+.saturday {
+  background-color: rgba(5, 105, 219, 0.39) !important;
+}
+.sunday {
+  background-color: rgba(255, 0, 0, 0.635) !important;
+}
+.month-heading {
+  color: #494949;
+  z-index: 999;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+}
+.prev,
+.next {
+  cursor: pointer;
+}
+.date-nav {
+  background-color: rgba(109, 109, 109, 0.06);
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 1px #6464642f;
+}
+.makeTile {
+  /* position: fixed; */
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  padding: 3px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.makeTile h4 {
+  margin: 0;
+  margin-bottom: 15px;
+  line-height: 1px;
+}
+.key {
+  font-family: "Courier New", Courier, monospace;
+  margin: 3px;
+}
+.special-day {
+  font-size: 0.8rem !important;
+}
+@media screen and (max-width: 768px) {
+  .month {
+    padding: 4px;
+  }
+  .makeTile {
+    font-size: 0.7rem;
+  }
+  .calendar {
+    margin: 0;
+    width: 100%;
+  }
+  .special-day {
+    font-size: 0.6rem !important;
+    text-wrap: wrap;
+  }
+  .date-number {
+    font-size: 17px !important;
+  }
+  .isHoliday {
+    font-size: 1.5rem;
+    top: 2px;
+    left: 2px;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./img/calendar.png" />
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="calendar">
+        
+      <div class="month">
+        <div class="prev" onclick="decrementYear()">
+          <span  class="date-nav">&#10094;</span>
+        </div>
+        <div>
+          <h2 class="year-heading"></h2>
+
+        </div>
+        <div class="next" onclick="incrementYear()">
+          <span class="date-nav">&#10095;</span>
+        </div>
+      </div>
+
+        <div class="month">
+          <div class="prev" onclick="decrementMonth()">
+            <span class="date-nav">&#10094;</span>
+          </div>
+          <div>
+            <h2 class="month-heading"></h2>
+          </div>
+          <div class="next" onclick="incrementMonth()">
+            <span class="date-nav">&#10095;</span>
+          </div>
+        </div>
+        <h3 class="key">* Public Holiday</h3>
+
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days">
+            <div class="cell cel-1 day-0"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-2 day-1"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-3 day-2"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-4 day-3"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-5 day-4"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-6 day-5"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-7 day-6"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-8 day-0"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-9 day-1"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-10 day-2"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-11 day-3"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-12 day-4"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-13 day-5"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-14 day-6"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-15 day-0"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-16 day-1"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-17 day-2"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-18 day-3"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-19 day-4"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-20 day-5"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-21 day-6"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-22 day-0"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-23 day-1"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-24 day-2"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-25 day-3"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-26 day-4"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-27 day-5"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-28 day-6"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-29 day-0"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-30 day-1"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-31 day-2"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-32 day-3"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-33 day-4"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-34 day-5"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+            <div class="cell cel-35 day-6"><span class="date-number"></span><span class="special-day"></span><div style="display: none;" class="isHoliday">*</div></div>
+
+        </div>
+      </div>
+      <div class="makeTile"><h4>Continuous Calendar</h4> <span> Ramesh Madara SOF/23/B2/02</span><span>Web Programming Assignment</span> </div>
+      <script src="./js/specialDates.js"></script>
+    <script src="./js/logic.js"></script>
+  </body>
+</html>
